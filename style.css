@@ -1,0 +1,146 @@
+:root{
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-heading: 'Playfair Display', serif;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+    background-color: rgb(153, 101, 86);
+}
+
+h2{
+    font-family: var(--ff-heading);
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.3125rem;
+}
+
+.bg-dark{
+    color: blanchedalmond;
+    background-color: #222c2a;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+   padding-inline: 1vw;
+}
+
+.info{
+    margin-top: 10px;
+}
+
+header p{
+    font-size: 1rem;
+}
+
+form #desc{
+    width: 50vw;
+    
+}
+
+form #val{
+    width: 16vw;
+}
+
+form{
+    padding-inline: 1vh;
+}
+
+
+
+form input, form button, form select{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: blanchedalmond; 
+    
+}
+
+
+
+.budget__income{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+.budget__expenses{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+.s1{
+    background-color: rgb(133, 56, 32);
+    color: blanchedalmond;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s2{
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.list{
+    padding-inline: 1vh;
+    padding-top: 10px;
+}
+
+.icome__title{
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.expenses__title{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.item{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 7px;
+    background-color: blanchedalmond;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.right{
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.item__delete--btn {
+    
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.item__percentage{
+margin-left: 10px;
+border:2px solid red;
+background-color: rgba(227, 17, 17, 0.70);
+padding-inline: 3px;
+border-radius: 20%;
+}
