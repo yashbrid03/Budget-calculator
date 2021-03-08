@@ -7,4 +7,4 @@ This is made using
 
 ## This is fully responsive web application
 
-**You can visit the website** [Budget Calculator](https://yashbrid03.github.io/Budget-calculator-using-javascript/)
+**You can visit the website** [Budget Calculator](https://yashbrid03.github.io/Budget-calculator/)
