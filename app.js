@@ -6,11 +6,6 @@ const month = monthNames[d.getMonth()];
 const dateElement = document.getElementById("month");
 dateElement.innerHTML = month;
 
-//add month
-
-//--------------
-
-
 // declaration
 const rem_inc = document.getElementById("ilist");
 const rem_exp = document.getElementById("elist");
@@ -33,7 +28,6 @@ function run() {
         alert("field should not remain empty");
     }
     else {
-        //
 
         if (typev == "+") {
             saveLocalInc(descv, valuev);
@@ -47,29 +41,24 @@ function run() {
             node2.setAttribute("class", "item__delete--btn");
             var node3 = document.createElement("div");
             node3.appendChild(node2);
-            // node3.setAttribute("class", "item__delete");
             var node4 = document.createElement("div");
-            // node4.setAttribute("class", "item__value");
             node4.appendChild(valtxt);
             var node5 = document.createElement("div");
             node5.setAttribute("class", "right ");
             node5.appendChild(node4);
             node5.appendChild(node3);
             var node6 = document.createElement("div");
-            // node6.setAttribute("class", "item__description");
             node6.appendChild(desctxt);
             var node7 = document.createElement("div");
             node7.setAttribute("class", "item");
             node7.appendChild(node6);
             node7.appendChild(node5);
             document.getElementById("ilist").appendChild(node7);
-
             updateinc1(valuev);
             document.getElementById("desc").value = "";
             document.getElementById("val").value = "";
         }
         else {
-
             saveLocalExp(descv, valuev);
             var desctxt = document.createTextNode(descv);
             var valtxt = document.createTextNode(valuev);
@@ -81,12 +70,10 @@ function run() {
             node2.setAttribute("class", "item__delete--btn");
             var node3 = document.createElement("div");
             node3.appendChild(node2);
-            // node3.setAttribute("class", "item__delete");
             var node4 = document.createElement("div");
             node4.setAttribute("class", "item__percentage");
             node4.appendChild(perctxt);
             var node5 = document.createElement("div");
-            //node5.setAttribute("class", "item__value");
             node5.appendChild(valtxt);
             var node6 = document.createElement("div");
             node6.setAttribute("class", "right ");
@@ -94,7 +81,6 @@ function run() {
             node6.appendChild(node4);
             node6.appendChild(node3);
             var node7 = document.createElement("div");
-            // node7.setAttribute("class", "item__description");
             node7.appendChild(desctxt);
             var node8 = document.createElement("div");
             node8.setAttribute("class", "item ");
@@ -105,10 +91,10 @@ function run() {
             document.getElementById("desc").value = "";
             document.getElementById("val").value = "";
         }
-
     }
 
 }
+
 function remove_inc(element) {
     element.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode.parentNode.parentNode);
 }
@@ -117,41 +103,28 @@ function remove_exp(element) {
     element.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode.parentNode.parentNode);
 }
 
-// localStorage.clear();
-
 rem_inc.addEventListener("click", function (event) {
     const element = event.target;
-    // console.log(element.nodeName);
-    // go till value
     var ch = element.parentNode.parentNode.parentNode.firstChild;
     var ch2 = element.parentNode.parentNode.parentNode.parentNode.firstChild;
-    //convert it into integer
-    var v = parseInt(ch.innerText);
+    var value = parseInt(ch.innerText);
     var desc = ch2.innerText;
-    // console.log(desc);
     const elementjob = element.nodeName;
     if (elementjob == "I") {
         remove_inc(element);
-        removeLocalInc(v, desc);
-        updateinc2(v);
+        removeLocalInc(value, desc);
+        updateinc2(value);
     }
 });
 
-
 rem_exp.addEventListener("click", function (event) {
     const element = event.target;
-    console.log(element)
     var ch = element.parentNode.parentNode.parentNode.firstChild;
-
     var value = parseInt(ch.innerText);
-
     var ch2 = element.parentNode.parentNode.parentNode.firstChild.nextSibling;
     var ch3 = element.parentNode.parentNode.parentNode.parentNode.firstChild;
-    //console.log(ch3)
     var percent = parseInt(ch2.innerText);
     var desc = ch3.innerText;
-
-
     elementjob = element.nodeName;
     if (elementjob == "I") {
         remove_exp(element);
@@ -160,7 +133,6 @@ rem_exp.addEventListener("click", function (event) {
         update_f_perc(percent);
     }
 });
-
 
 function updateinc1(valuev) {
     var a = parseInt(valuev);
@@ -224,9 +196,7 @@ document.addEventListener('keypress', function (event) {
     }
 });
 
-//localStorage.clear();
-
-//function to save inc at local storage
+//function to save income at local storage
 function saveLocalInc(desc, price) {
     let locinc;
     up1 = {
@@ -242,7 +212,7 @@ function saveLocalInc(desc, price) {
     localStorage.setItem('locinc', JSON.stringify(locinc));
 }
 
-//function to save exp at local storage
+//function to save expense at local storage
 function saveLocalExp(desc, price) {
     let locexp;
     up2 = {
@@ -277,7 +247,6 @@ function getall() {
     savedinc.forEach(function (inc) {
         console.log(inc['description']);
         console.log(inc['money']);
-
         var desctxt = document.createTextNode(inc['description']);
         var valtxt = document.createTextNode("+" + inc['money']);
         var node1 = document.createElement("i");
@@ -287,32 +256,26 @@ function getall() {
         node2.setAttribute("class", "item__delete--btn");
         var node3 = document.createElement("div");
         node3.appendChild(node2);
-        // node3.setAttribute("class", "item__delete");
         var node4 = document.createElement("div");
-        // node4.setAttribute("class", "item__value");
         node4.appendChild(valtxt);
         var node5 = document.createElement("div");
         node5.setAttribute("class", "right");
         node5.appendChild(node4);
         node5.appendChild(node3);
         var node6 = document.createElement("div");
-        // node6.setAttribute("class", "item__description");
         node6.appendChild(desctxt);
         var node7 = document.createElement("div");
         node7.setAttribute("class", "item");
         node7.appendChild(node6);
         node7.appendChild(node5);
         document.getElementById("ilist").appendChild(node7);
-
         updateinc1(inc['money']);
         document.getElementById("desc").value = "";
         document.getElementById("val").value = "";
-
     });
     savedexp.forEach(function (inc) {
         console.log(inc['description']);
         console.log(inc['money']);
-
         var desctxt = document.createTextNode(inc['description']);
         var valtxt = document.createTextNode(inc['money']);
         var perctxt = document.createTextNode(calc_perc(inc['money']) + "%");
@@ -323,12 +286,10 @@ function getall() {
         node2.setAttribute("class", "item__delete--btn");
         var node3 = document.createElement("div");
         node3.appendChild(node2);
-        // node3.setAttribute("class", "item__delete");
         var node4 = document.createElement("div");
         node4.setAttribute("class", "item__percentage");
         node4.appendChild(perctxt);
         var node5 = document.createElement("div");
-        // node5.setAttribute("class", "item__value");
         node5.appendChild(valtxt);
         var node6 = document.createElement("div");
         node6.setAttribute("class", "right");
@@ -336,7 +297,6 @@ function getall() {
         node6.appendChild(node4);
         node6.appendChild(node3);
         var node7 = document.createElement("div");
-        // node7.setAttribute("class", "item__description");
         node7.appendChild(desctxt);
         var node8 = document.createElement("div");
         node8.setAttribute("class", "item");
@@ -351,7 +311,7 @@ function getall() {
 
 getall();
 
-//remove local exp  
+//remove expense from local storage 
 function removeLocalExp(value, desc) {
     let locexp;
     if (localStorage.getItem("locexp") === null) {
@@ -359,15 +319,12 @@ function removeLocalExp(value, desc) {
     } else {
         locexp = JSON.parse(localStorage.getItem("locexp"));
     }
-
-    //const todoIndex = todo;
     let index = locexp.find(item => item.money == value && item.description == desc);
-
     locexp.splice(locexp.indexOf(index), 1);
     localStorage.setItem("locexp", JSON.stringify(locexp));
 }
 
-//remove local Inc  
+//remove Income from local storage  
 function removeLocalInc(value, desc) {
     let locinc;
     if (localStorage.getItem("locinc") === null) {

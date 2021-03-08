@@ -16,28 +16,24 @@
         <div class="info" > 
             <a href="https://github.com/yashbrid03"><img src="github-logo-white (1).png" height="40px" width="40px"></a>
             <a href="https://www.instagram.com/yashbrid04/"><img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png" height="40px" width="40px"></a>
-          </div>
+        </div>
         <h2>Budget Calc</h2>
         <p>yashbrid03</p>
     </header>
     <div>
         <section class="s1 ">
-            <div>
-                
+            <div> 
                 <div class="budget__title">
                     Available Budget in <span id="month"></span>
                 </div>
-                
                 <div class="budget__value" id="f_scr">-0.00 Rs.</div>
                 <hr>
                 <div class="budget__income ">
                     <div >Income</div>
                     <div >
-                        <div  id="upd_inc">+ 0.00</div>
-                        
+                        <div  id="upd_inc">+ 0.00</div> 
                     </div>
                 </div>
-                
                 <div class="budget__expenses ">
                     <div >Expenses</div>
                     <div >
@@ -47,54 +43,56 @@
                 </div>
             </div>
         </section>
-        <section class="s2">
-        <form>
-            <select id="type">
-                <option value="+">+</option>
-                <option value="-">-</option>
-            </select>
-            <input type="text" id="desc" placeholder="Description">
-            <input type="number" id="val" placeholder="Value">
-            <button type="submit" onclick="run()">Add</button>
-        </form>
-        <div class="list">
-        <div class="income">
-            <h2 class="icome__title">Income</h2>
-            <hr>
-            <div class="income__list" id="ilist">
-                <!-- <div class="item" >
-                    <div>Salary</div>
-                    <div class="right ">
-                        <div>+ 2,100.00</div>
-                        <div>
-                            <div class="item__delete--btn"><i class="fa fa-close" ></i></div>
+        <section class="split">
+            <section class="s2">
+                <form class="container split">
+                    <select id="type">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                    </select>
+                    <input type="text" id="desc" placeholder="Description">
+                    <input type="number" id="val" placeholder="Value">
+                    <button type="submit" onclick="run()">Add</button>
+                </form>
+                <div class="container">
+                    <div class="list split">
+                        <div class="income container">
+                            <h2 class="icome__title">Income</h2>
+                            <hr>
+                            <div class="income__list" id="ilist">
+                                <!-- <div class="item" >
+                                    <div>Salary</div>
+                                    <div class="right ">
+                                        <div>+ 2,100.00</div>
+                                        <div>
+                                            <div class="item__delete--btn"><i class="fa fa-close" ></i></div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
                         </div>
-                    </div>
-                </div> -->
-              
-            </div>
-        </div>
-        <div class="expenses">
-            <h2 class="expenses__title">Expenses</h2>
-            <hr>
-            <div class="expenses__list" id="elist">
-                <!-- <div class="item " >
-                    <div >Apartment rent</div>
-                    <div class="right ">
-                        <div >- 900</div>
-                        <div class="item__percentage">21%</div>
-                        <div >
-                            <div class="item__delete--btn"><i class="fa fa-close"></i></div>
+                        <div class="expenses container">
+                            <h2 class="expenses__title">Expenses</h2>
+                            <hr>
+                            <div class="expenses__list" id="elist">
+                                <!-- <div class="item " >
+                                    <div >Apartment rent</div>
+                                    <div class="right ">
+                                        <div >- 900</div>
+                                        <div class="item__percentage">21%</div>
+                                        <div >
+                                            <div class="item__delete--btn"><i class="fa fa-close"></i></div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
                         </div>
-                     </div>
-                 </div> -->
-            </div>
-        </div>
-        </div>      
-        </section>
-        <section class="s3">
-            <div><canvas id="chart-area"></canvas></div>
-            
+                    </div> 
+                </div>     
+            </section>
+            <section class="s3 container">
+                <div ><canvas id="chart-area"></canvas></div>   
+            </section>
         </section>
     </div>
     <script src="app.js"></script>

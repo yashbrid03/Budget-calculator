@@ -15,6 +15,7 @@ body{
     font-size: 1.3125rem;
     line-height: 1.6;
     background-color: rgb(153, 101, 86);
+    overflow-x: hidden;
 }
 
 h2{
@@ -45,30 +46,29 @@ header p{
 }
 
 form #desc{
-    width: 50vw;
-    
+    width: 40vw;
+}
+
+form #type{
+    width: 12.5vw 
 }
 
 form #val{
-    width: 16vw;
+    width: 15vw;
 }
 
 form{
     padding-inline: 1vh;
 }
 
-
-
 form input, form button, form select{
     padding: 0.5rem;
     font-size: 1rem;
+    outline: none;
     border: none;
     border-radius: 5px;
     background: blanchedalmond; 
-    
 }
-
-
 
 .budget__income{
     display: flex;
@@ -111,10 +111,14 @@ form input, form button, form select{
 }
 
 .expenses__title{
-    margin-top: 10px;
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 10px;
+}
+
+hr{
+    margin-bottom: 10px;
+    width: 99%;
 }
 
 .item{
@@ -127,20 +131,56 @@ form input, form button, form select{
 }
 
 .right{
-  display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+    display: flex;
 }
 .item__delete--btn {
-    
     vertical-align: middle;
     margin-left: 10px;
 }
 
 .item__percentage{
-margin-left: 10px;
-border:2px solid red;
-background-color: rgba(227, 17, 17, 0.70);
-padding-inline: 3px;
-border-radius: 20%;
+    margin-left: 10px;
+    background-color: rgba(227, 17, 17, 0.70);
+    padding-inline: 3px;
+    border-radius: 20%;
+}
+
+.container{
+    margin-inline: auto;
+    width: min(90%,70.5rem);
+}
+
+.expenses{
+    margin-left: 10px;
+}
+
+@media (min-width: 40em){
+    .split{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    form #desc{
+        width: 30vw;
+        margin-left: 5px;
+    }
+
+    form #val {
+        width:10vw;
+        margin-left: 5px;
+    }
+
+    form #type{
+        width: 6vw;
+        margin-left: 5px;
+    }
+
+    form button{
+        margin-left: 5px;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
 }
