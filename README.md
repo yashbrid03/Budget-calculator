@@ -1,6 +1,14 @@
 # Budget-calculator-using-javascript
 <h2>📙 Abstract :</h2>
-<p> This project is about Budget maintainence and how you can keep track of your budget. It has simple features like add Income, add Expenses, remove Income and remove Expenses. It also shows how much money you are left with by performing calculations and show the graph of income and expense</p>
+<p> This project is about Budget maintainence and how you can keep track of your budget.
+  <br><h4>It includes following features :</h4> 
+  <ul>
+  <li>Adding Incomes</li>
+  <li>Adding Expenses</li>
+  <li>Remove Incomes</li>
+  <li>Remove Expenses</li>
+  </ul>
+  It also shows how much money you are left with by performing calculations and show the graph of income and expense</p>
 
 <h3>✨You can vist the website here: <a href="https://yashbrid03.github.io/Budget-calculator/">Budget Calculator</a>✨</h3>
 
