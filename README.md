@@ -17,7 +17,9 @@
   </ul>
   
 <h2>This is fully responsive web application</h2>
+
 ![image](https://user-images.githubusercontent.com/65955929/110600980-82929500-81aa-11eb-93eb-f01f9a3629bd.png)
+
 ![image](https://user-images.githubusercontent.com/65955929/110601174-ac4bbc00-81aa-11eb-8a97-3a4722c69ab3.png)
 
 
