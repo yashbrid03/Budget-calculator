@@ -21,9 +21,6 @@
 
 <img src="https://user-images.githubusercontent.com/65955929/110600980-82929500-81aa-11eb-93eb-f01f9a3629bd.png" width="50%" />
 
-
-
-![image](https://user-images.githubusercontent.com/65955929/110601174-ac4bbc00-81aa-11eb-8a97-3a4722c69ab3.png)
-
+<img src="https://user-images.githubusercontent.com/65955929/110601174-ac4bbc00-81aa-11eb-8a97-3a4722c69ab3.png" width="50%" />
 
 **You can visit the website** [Budget Calculator](https://yashbrid03.github.io/Budget-calculator/)
