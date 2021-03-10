@@ -5,8 +5,8 @@
   <ul>
   <li>Adding Incomes</li>
   <li>Adding Expenses</li>
-  <li>Remove Incomes</li>
-  <li>Remove Expenses</li>
+  <li>Removing Incomes</li>
+  <li>Removing Expenses</li>
   </ul>
   It also shows how much money you are left with by performing calculations and show the graph of income and expense</p>
 
