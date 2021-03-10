@@ -11,12 +11,15 @@
  
  <h2>Javascript Topics Covered :</h2>
  <ul>
+  <li>DOM Elements</li>
   <li>DOM Nodes</li>
   <li>Local Storage</li>
   <li>Event Handlers</li>
   </ul>
   
-<h2>This is fully responsive web application</h2>
+<h2>This is a fully responsive web application</h2>
+
+<img src="https://user-images.githubusercontent.com/65955929/110600980-82929500-81aa-11eb-93eb-f01f9a3629bd.png" />
 
 ![image](https://user-images.githubusercontent.com/65955929/110600980-82929500-81aa-11eb-93eb-f01f9a3629bd.png)
 
