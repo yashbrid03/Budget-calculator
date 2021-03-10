@@ -17,6 +17,7 @@
   <li><b>DOM Nodes</b></li>
   <li><b>Local Storage</b></li>
   <li><b>Event Handlers</b></li>
+  <li><b>Chart.js Library</b></li>
   </ul>
   
 <h2>This is a fully responsive web application</h2>
